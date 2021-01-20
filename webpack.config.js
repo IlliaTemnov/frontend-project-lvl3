@@ -3,11 +3,10 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  mode: process.env.NODE_ENV || 'development',
+  mode: 'development',
   entry: [
     './src/index.js',
   ],
-  watch: true,
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'src'),
@@ -19,7 +18,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'RSS',
-      template: path.resolve('./src/index.html'),
+      template: path.resolve('./src/template.html'),
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],
