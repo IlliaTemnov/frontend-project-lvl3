@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
@@ -20,7 +19,7 @@ module.exports = {
       title: 'RSS',
       template: path.resolve('./template.html'),
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
   ],
   // output: {
   //   filename: 'main.js',
@@ -43,24 +42,24 @@ module.exports = {
           'sass-loader',
         ],
       },
-      {
-        test: /\.(jpg|jpeg|gif|png|svg|webp)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: './images',
-              name: '[name].[ext]',
-            },
-          },
-        ],
-      },
-      {
-        test: /\.html$/,
-        use: {
-          loader: 'html-loader',
-        },
-      },
+      // {
+      //   test: /\.(jpg|jpeg|gif|png|svg|webp)$/,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         outputPath: './images',
+      //         name: '[name].[ext]',
+      //       },
+      //     },
+      //   ],
+      // },
+      // {
+      //   test: /\.html$/,
+      //   use: {
+      //     loader: 'html-loader',
+      //   },
+      // },
     ],
   },
 };
