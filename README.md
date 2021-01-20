@@ -7,3 +7,5 @@
 This RSS Aggregator is a simple to use program to add and manage resources that you love.
 
 ##  Example ##
+https://rss-aggregator-one.vercel.app
+
